@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti, Mi niña hermosa 💜</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@300;400;600;700&family=Pacifico&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Fondo animado con degradado mejorado */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, 
+                rgba(147, 51, 234, 0.4) 0%, 
+                rgba(219, 39, 119, 0.4) 20%, 
+                rgba(244, 114, 182, 0.4) 40%, 
+                rgba(192, 132, 252, 0.4) 60%, 
+                rgba(168, 85, 247, 0.4) 80%,
+                rgba(147, 51, 234, 0.4) 100%
+            );
+            background-size: 400% 400%;
+            animation: gradientShift 12s ease infinite;
+            z-index: 0;
+        }
+        
+        /* Capa adicional de brillo */
+        body::after {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+            animation: rotate-slow 25s linear infinite;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Container principal */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Tarjeta principal */
+        .love-card {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 40px;
+            padding: 60px 50px;
+            margin: 40px 0;
+            box-shadow: 
+                0 30px 90px rgba(147, 51, 234, 0.5), 
+                0 0 60px rgba(244, 114, 182, 0.4),
+                0 5px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
+            border: 4px solid rgba(192, 132, 252, 0.5);
+            position: relative;
+            overflow: hidden;
+            animation: cardEntrance 1.2s ease-out;
+        }
+        
+        @keyframes cardEntrance {
+            from {
+                opacity: 0;
+                transform: scale(0.85) translateY(50px) rotateX(10deg);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0) rotateX(0deg);
+            }
+        }
+        
+        .love-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(244, 114, 182, 0.15) 0%, transparent 70%);
+            animation: rotate-slow 20s linear infinite;
+        }
+        
+        /* Efecto de brillo adicional en los bordes */
+        .love-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 40px;
+            padding: 4px;
+            background: linear-gradient(45deg, #9333ea, #db2777, #f472b6, #c084fc, #9333ea);
+            background-size: 300% 300%;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: borderGlow 3s ease-in-out infinite;
+            opacity: 0.6;
+        }
+        
+        @keyframes borderGlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes rotate-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Contenido de la tarjeta */
+        .card-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Título principal */
+        .main-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4em;
+            text-align: center;
+            background: linear-gradient(135deg, #9333ea 0%, #db2777 50%, #f472b6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            animation: titleFloat 3s ease-in-out infinite;
+            font-weight: 700;
+            position: relative;
+            filter: drop-shadow(0 5px 15px rgba(147, 51, 234, 0.4));
+        }
+        
+        @keyframes titleFloat {
+            0%, 100% { 
+                transform: translateY(0px) scale(1); 
+                filter: drop-shadow(0 5px 15px rgba(147, 51, 234, 0.4));
+            }
+            50% { 
+                transform: translateY(-15px) scale(1.03); 
+                filter: drop-shadow(0 10px 25px rgba(219, 39, 119, 0.6));
+            }
+        }
+        
+        .subtitle {
+            font-family: 'Quicksand', sans-serif;
+            text-align: center;
+            font-size: 1.4em;
+            color: #9333ea;
+            margin-bottom: 40px;
+            font-weight: 400;
+            opacity: 0;
+            animation: fadeIn 1.5s ease forwards;
+            animation-delay: 0.5s;
+        }
+        
+        /* Girasoles decorativos */
+        .sunflower {
+            position: fixed;
+            font-size: 60px;
+            animation: floatSunflower 4s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+            filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+        }
+        
+        @keyframes floatSunflower {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+        }
+        
+        /* Corazones flotantes */
+        .heart-float {
+            position: fixed;
+            color: #f472b6;
+            font-size: 30px;
+            animation: heartRise 5s ease-in infinite;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0;
+        }
+        
+        @keyframes heartRise {
+            0% {
+                opacity: 0;
+                transform: translateY(0) scale(0.5) rotate(0deg);
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-100vh) scale(1.2) rotate(360deg);
+            }
+        }
+        
+        /* Sección de mensaje */
+        .message-section {
+            background: linear-gradient(135deg, #fae8ff 0%, #fce7f3 100%);
+            padding: 40px;
+            border-radius: 25px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(147, 51, 234, 0.15);
+            border: 3px solid #e9d5ff;
+            position: relative;
+            overflow: hidden;
+            animation: slideInLeft 1s ease-out;
+            animation-delay: 0.8s;
+            animation-fill-mode: both;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .message-section::before {
+            content: '💜';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3em;
+            opacity: 0.2;
+        }
+        
+        .message-text {
+            font-size: 1.3em;
+            line-height: 1.8;
+            color: #701a75;
+            font-weight: 400;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .message-text strong {
+            color: #9333ea;
+            font-weight: 700;
+        }
+        
+        /* Galería de fotos simulada */
+        .photo-frame {
+            background: white;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            margin: 30px 0;
+            transform: rotate(-2deg);
+            transition: all 0.3s ease;
+            animation: slideInRight 1s ease-out;
+            animation-delay: 1s;
+            animation-fill-mode: both;
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px) rotate(-2deg);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0) rotate(-2deg);
+            }
+        }
+        
+        .photo-frame:hover {
+            transform: rotate(0deg) scale(1.05);
+            box-shadow: 0 15px 40px rgba(147, 51, 234, 0.3);
+        }
+        
+        .photo-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #fae8ff 0%, #f3e8ff 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5em;
+            position: relative;
+            overflow: hidden;
+            border: 3px dashed #c084fc;
+        }
+        
+        .photo-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+            animation: photoShine 3s ease-in-out infinite;
+        }
+        
+        /* Estilos para el hint de subir foto */
+        .photo-upload-hint {
+            text-align: center;
+            z-index: 1;
+            position: relative;
+        }
+        
+        .camera-icon {
+            font-size: 5em;
+            margin-bottom: 20px;
+            animation: cameraFloat 2s ease-in-out infinite;
+        }
+        
+        @keyframes cameraFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .upload-text {
+            font-size: 0.35em;
+            color: #9333ea;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        .upload-subtext {
+            font-size: 0.25em;
+            color: #c084fc;
+            font-weight: 500;
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        @keyframes photoShine {
+            0% { left: -100%; }
+            50%, 100% { left: 100%; }
+        }
+        
+        .photo-caption {
+            text-align: center;
+            margin-top: 15px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5em;
+            color: #9333ea;
+        }
+        
+        /* Razones para amarte */
+        .reasons-section {
+            margin: 40px 0;
+            animation: fadeInUp 1s ease-out;
+            animation-delay: 1.2s;
+            animation-fill-mode: both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .reasons-title {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5em;
+            text-align: center;
+            color: #9333ea;
+            margin-bottom: 30px;
+        }
+        
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .reason-card {
+            background: linear-gradient(135deg, #ffffff 0%, #fae8ff 100%);
+            padding: 30px 25px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(147, 51, 234, 0.15);
+            border: 2px solid #e9d5ff;
+            transition: all 0.4s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .reason-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(244, 114, 182, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .reason-card:hover::before {
+            left: 100%;
+        }
+        
+        .reason-card:hover {
+            transform: translateY(-12px) scale(1.05);
+            box-shadow: 0 20px 45px rgba(147, 51, 234, 0.35);
+            border-color: #f472b6;
+            background: linear-gradient(135deg, #ffffff 0%, #fce7f3 100%);
+        }
+        
+        .reason-icon {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            animation: bounce 2s infinite;
+            filter: drop-shadow(0 5px 10px rgba(147, 51, 234, 0.3));
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-12px) scale(1.1); }
+            60% { transform: translateY(-6px); }
+        }
+        
+        .reason-text {
+            font-size: 1.2em;
+            color: #701a75;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Contador de días juntos */
+        .counter-section {
+            background: linear-gradient(135deg, #9333ea 0%, #db2777 100%);
+            padding: 40px;
+            border-radius: 25px;
+            margin: 40px 0;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(147, 51, 234, 0.4);
+            animation: fadeInScale 1s ease-out;
+            animation-delay: 1.4s;
+            animation-fill-mode: both;
+        }
+        
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .counter-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2em;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .counter-display {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .counter-item {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .counter-number {
+            font-size: 3em;
+            font-weight: 700;
+            color: white;
+            display: block;
+            text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .counter-label {
+            color: #fae8ff;
+            font-size: 1em;
+            margin-top: 5px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        
+        /* Mensaje final */
+        .final-message {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 45px;
+            border-radius: 30px;
+            margin: 40px 0;
+            text-align: center;
+            border: 4px dashed #f59e0b;
+            animation: fadeIn 1s ease-out;
+            animation-delay: 1.6s;
+            animation-fill-mode: both;
+            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .final-message::before {
+            content: '✨';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 3em;
+            animation: sparkleAnim 2s ease-in-out infinite;
+        }
+        
+        .final-message::after {
+            content: '✨';
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 3em;
+            animation: sparkleAnim 2s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+        
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: scale(0.95);
+            }
+            to { 
+                opacity: 1; 
+                transform: scale(1);
+            }
+        }
+        
+        .final-message-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5em;
+            color: #92400e;
+            font-weight: 700;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2em;
+            color: #9333ea;
+            margin-top: 30px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+            animation: signaturePulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes signaturePulse {
+            0%, 100% { 
+                transform: scale(1);
+                filter: drop-shadow(0 3px 8px rgba(147, 51, 234, 0.3));
+            }
+            50% { 
+                transform: scale(1.05);
+                filter: drop-shadow(0 5px 15px rgba(147, 51, 234, 0.5));
+            }
+        }
+        
+        /* Botón de música */
+        .music-toggle {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #9333ea 0%, #db2777 100%);
+            border-radius: 50%;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(147, 51, 234, 0.5);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: musicFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes musicFloat {
+            0%, 100% {
+                transform: translateY(0px) scale(1);
+                box-shadow: 0 8px 25px rgba(147, 51, 234, 0.5);
+            }
+            50% {
+                transform: translateY(-12px) scale(1.05);
+                box-shadow: 0 15px 35px rgba(147, 51, 234, 0.7);
+            }
+        }
+        
+        .music-toggle:hover {
+            transform: scale(1.15) rotate(15deg);
+        }
+        
+        .music-toggle.playing {
+            animation: spinPulse 3s linear infinite, musicFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes spinPulse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .music-toggle::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 3px solid #f472b6;
+            animation: musicRipple 2s ease-out infinite;
+        }
+        
+        @keyframes musicRipple {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .love-card {
+                padding: 40px 25px;
+                border-radius: 30px;
+            }
+            
+            .main-title {
+                font-size: 2.5em;
+            }
+            
+            .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .message-text {
+                font-size: 1.1em;
+            }
+            
+            .reasons-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .counter-display {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .final-message-text {
+                font-size: 1.8em;
+            }
+            
+            .sunflower {
+                font-size: 40px;
+            }
+            
+            .photo-placeholder {
+                height: 300px;
+            }
+            
+            .camera-icon {
+                font-size: 4em;
+            }
+            
+            .signature {
+                font-size: 1.8em;
+            }
+        }
+        
+        /* Estrellas brillantes */
+        .sparkle {
+            position: fixed;
+            font-size: 20px;
+            animation: sparkleAnim 2s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        @keyframes sparkleAnim {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0) rotate(0deg);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.5) rotate(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Audio de fondo romántico -->
+    <audio id="bgMusic" loop>
+        <source src="Beéle - Si Te Pillara.mp3" type="audio/mpeg">
+        <!-- Aquí puedes poner tu canción favorita de ambos -->
+    </audio>
+    
+    <!-- Control de música -->
+    <button class="music-toggle" id="musicBtn">🎵</button>
+    
+    <!-- Contenedores para elementos decorativos -->
+    <div id="sunflowers-container"></div>
+    <div id="hearts-container"></div>
+    <div id="sparkles-container"></div>
+    
+    <div class="container">
+        <div class="love-card">
+            <div class="card-content">
+                <!-- Título -->
+                <h1 class="main-title">Para Ti, Mi niña hermosa 💜</h1>
+                <p class="subtitle">Feliz Cumpleaños, mi amor</p>
+                
+                <!-- Mensaje principal -->
+                <div class="message-section">
+                    <p class="message-text">
+                        Hoy es un día muy especial, porque celebramos <strong>tu existencia</strong>, 
+                        tu sonrisa, tu luz y todo lo maravilloso que eres. 
+                        Quiero que sepas que cada momento a tu lado es un <strong>regalo</strong> 
+                        que atesoro en mi corazón. Eres la razón por la que mis días son más 
+                        brillantes y mis noches más tranquilas. 🌻
+                    </p>
+                </div>
+                
+                <!-- Marco de foto -->
+                <div class="photo-frame">
+                    <div class="photo-placeholder" id="photoContainer">
+
+                        <div class="photo-upload-hint">
+                            <div class="camera-icon">📸</div>
+                            <p class="upload-text">Nuestra Foto Especial</p>
+                            <p class="upload-subtext">Coloca aquí una imagen de ustedes dos</p>
+                        </div>
+                    </div>
+                    <p class="photo-caption">Tú y yo, siempre 💜</p>
+                </div>
+                
+                <!-- Razones para amarte -->
+                <div class="reasons-section">
+                    <h2 class="reasons-title">Por qué te amo 🌻</h2>
+                    <div class="reasons-grid">
+                        <div class="reason-card">
+                            <div class="reason-icon">😊</div>
+                            <p class="reason-text">Tu sonrisa ilumina mis días</p>
+                        </div>
+                        <div class="reason-card">
+                            <div class="reason-icon">💖</div>
+                            <p class="reason-text">Tu corazón tan hermoso</p>
+                        </div>
+                        <div class="reason-card">
+                            <div class="reason-icon">✨</div>
+                            <p class="reason-text">La luz que irradias</p>
+                        </div>
+                        <div class="reason-card">
+                            <div class="reason-icon">🌟</div>
+                            <p class="reason-text">Cómo me haces sentir especial</p>
+                        </div>
+                        <div class="reason-card">
+                            <div class="reason-icon">🎵</div>
+                            <p class="reason-text">Tu risa es mi canción favorita</p>
+                        </div>
+                        <div class="reason-card">
+                            <div class="reason-icon">🌈</div>
+                            <p class="reason-text">Los colores que traes a mi vida</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contador (puedes personalizarlo) -->
+                <div class="counter-section">
+                    <h2 class="counter-title">Nuestro Tiempo Juntos ⏰💕</h2>
+                    <div class="counter-display" id="loveCounter">
+                        <div class="counter-item">
+                            <span class="counter-number" id="days">0</span>
+                            <span class="counter-label">Días</span>
+                        </div>
+                        <div class="counter-item">
+                            <span class="counter-number" id="hours">0</span>
+                            <span class="counter-label">Horas</span>
+                        </div>
+                        <div class="counter-item">
+                            <span class="counter-number" id="minutes">0</span>
+                            <span class="counter-label">Minutos</span>
+                        </div>
+                        <div class="counter-item">
+                            <span class="counter-number" id="seconds">0</span>
+                            <span class="counter-label">Segundos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mensaje final -->
+                <div class="final-message">
+                    <p class="final-message-text">
+                        ✨ Que este nuevo año de vida esté lleno de sueños cumplidos, 
+                        risas interminables y amor infinito. 
+                        Gracias por existir y por elegirme. 
+                        ¡Feliz cumpleaños, mi amor! 🌻💜
+                    </p>
+                    <p class="signature">Con todo mi amor, siempre tuyo 💕</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // ========== CONFIGURACIÓN EDITABLE ==========
+        
+        // Fecha desde cuando están juntos (Año, Mes-1, Día, Hora, Minutos)
+        const startDate = new Date(2025, 7, 7, 0, 0, 0); // Ejemplo: 1 de enero 2024
+        // Cambia esta fecha por la fecha real en que comenzaron su relación
+        
+        // ========== CONFIGURACIÓN DE FOTO ==========
+        // Opción 1: Coloca el nombre de tu archivo de imagen aquí
+        // La imagen debe estar en la misma carpeta que este archivo HTML
+        const photoFileName = ""; // Ejemplo: "nuestra-foto.jpg"
+        
+        // Opción 2: O coloca la URL completa de una imagen en línea
+        const photoURL = "gabi_omar.jpg"; // Ejemplo: "https://ejemplo.com/foto.jpg"
+        
+        // Si tienes una foto, se cargará automáticamente
+        if (photoFileName || photoURL) {
+            const photoContainer = document.getElementById('photoContainer');
+            const imgSrc = photoURL || photoFileName;
+            photoContainer.innerHTML = `<img src="${imgSrc}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;" alt="Nuestra foto especial">`;
+        }
+        // ============================================
+        
+        // URL de música romántica (editable)
+        const musicURL = "Beéle - Si Te Pillara.mp3";
+        document.getElementById('bgMusic').src = musicURL;
+        
+        // ============================================
+        
+        // Contador de tiempo juntos
+        function updateLoveCounter() {
+            const now = new Date().getTime();
+            const timeTogether = now - startDate.getTime();
+            
+            const days = Math.floor(timeTogether / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeTogether % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeTogether % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeTogether % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+        
+        // Actualizar contador cada segundo
+        updateLoveCounter();
+        setInterval(updateLoveCounter, 1000);
+        
+        // Control de música
+        const music = document.getElementById('bgMusic');
+        const musicBtn = document.getElementById('musicBtn');
+        let musicStarted = false;
+        
+        function startMusic() {
+            if (!musicStarted) {
+                music.play().catch(e => console.log('Autoplay bloqueado:', e));
+                musicStarted = true;
+                musicBtn.classList.add('playing');
+            }
+        }
+        
+        // Intentar reproducir con interacción
+        document.addEventListener('click', startMusic, { once: true });
+        document.addEventListener('touchstart', startMusic, { once: true });
+        
+        // Toggle música
+        musicBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (music.paused) {
+                music.play();
+                musicBtn.classList.add('playing');
+                musicBtn.textContent = '🎵';
+            } else {
+                music.pause();
+                musicBtn.classList.remove('playing');
+                musicBtn.textContent = '🔇';
+            }
+        });
+        
+        // Generar girasoles
+        function createSunflowers() {
+            const container = document.getElementById('sunflowers-container');
+            const positions = [
+                { top: '10%', left: '5%', delay: '0s' },
+                { top: '20%', right: '8%', delay: '0.5s' },
+                { top: '60%', left: '3%', delay: '1s' },
+                { bottom: '15%', right: '5%', delay: '1.5s' },
+                { top: '45%', left: '2%', delay: '2s' },
+                { top: '75%', right: '3%', delay: '2.5s' }
+            ];
+            
+            positions.forEach(pos => {
+                const sunflower = document.createElement('div');
+                sunflower.className = 'sunflower';
+                sunflower.textContent = '🌻';
+                Object.assign(sunflower.style, pos);
+                sunflower.style.animationDelay = pos.delay;
+                container.appendChild(sunflower);
+            });
+        }
+        
+        // Generar corazones flotantes
+        function createFloatingHearts() {
+            const container = document.getElementById('hearts-container');
+            const hearts = ['💜', '💗', '💖', '💝', '💕'];
+            
+            setInterval(() => {
+                const heart = document.createElement('div');
+                heart.className = 'heart-float';
+                heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.bottom = '-50px';
+                heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
+                heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                heart.style.animationDelay = Math.random() * 2 + 's';
+                container.appendChild(heart);
+                
+                setTimeout(() => heart.remove(), 7000);
+            }, 800);
+        }
+        
+        // Generar estrellas brillantes
+        function createSparkles() {
+            const container = document.getElementById('sparkles-container');
+            const sparkles = ['✨', '⭐', '💫', '🌟'];
+            
+            setInterval(() => {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.textContent = sparkles[Math.floor(Math.random() * sparkles.length)];
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.animationDuration = (Math.random() * 1 + 1.5) + 's';
+                sparkle.style.animationDelay = Math.random() + 's';
+                container.appendChild(sparkle);
+                
+                setTimeout(() => sparkle.remove(), 3000);
+            }, 500);
+        }
+        
+        // Inicializar decoraciones
+        createSunflowers();
+        createFloatingHearts();
+        createSparkles();
+        
+        // Efecto de pétalos cayendo (girasoles pequeños)
+        function createFallingPetals() {
+            const body = document.body;
+            
+            setInterval(() => {
+                const petal = document.createElement('div');
+                petal.style.position = 'fixed';
+                petal.style.top = '-50px';
+                petal.style.left = Math.random() * 100 + '%';
+                petal.style.fontSize = '25px';
+                petal.style.opacity = '0.7';
+                petal.style.pointerEvents = 'none';
+                petal.style.zIndex = '0';
+                petal.textContent = '🌻';
+                petal.style.animation = `heartRise ${Math.random() * 5 + 8}s linear`;
+                
+                body.appendChild(petal);
+                
+                setTimeout(() => petal.remove(), 13000);
+            }, 2000);
+        }
+        
+        createFallingPetals();
+    </script>
+</body>
+</html>
